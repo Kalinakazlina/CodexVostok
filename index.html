@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Вход в CodexVostok для команды и клиентов.">
+    <title>CodexVostok</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="entry" aria-labelledby="page-title">
+      <section class="entry__panel">
+        <p class="entry__eyebrow">CodexVostok</p>
+        <h1 id="page-title">Выбери свой путь</h1>
+
+        <div class="entry__actions" aria-label="Выбор типа входа">
+          <button class="choice choice--team" type="button" data-open-modal="team">
+            КОМАНДА
+          </button>
+          <button class="choice choice--client" type="button" data-open-modal="client">
+            КЛИЕНТ
+          </button>
+        </div>
+      </section>
+
+      <section class="mascot-zone" aria-label="Маскот видеопродакшна">
+        <div class="speech" id="mascot-question">Кто ты, воин?</div>
+
+        <div class="camera-mascot" aria-hidden="true">
+          <div class="camera-mascot__top"></div>
+          <div class="camera-mascot__body">
+            <div class="camera-mascot__lens">
+              <span></span>
+            </div>
+            <div class="camera-mascot__eye camera-mascot__eye--left"></div>
+            <div class="camera-mascot__eye camera-mascot__eye--right"></div>
+            <div class="camera-mascot__smile"></div>
+          </div>
+          <div class="camera-mascot__handle"></div>
+          <div class="camera-mascot__viewfinder"></div>
+          <div class="camera-mascot__leg camera-mascot__leg--left"></div>
+          <div class="camera-mascot__leg camera-mascot__leg--right"></div>
+          <div class="camera-mascot__foot camera-mascot__foot--left"></div>
+          <div class="camera-mascot__foot camera-mascot__foot--right"></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal" id="client-modal" aria-labelledby="client-title">
+      <form class="modal__box" method="dialog" data-form="client">
+        <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-modal>
+          ×
+        </button>
+        <p class="modal__eyebrow">Клиентский вход</p>
+        <h2 id="client-title">Введите ключ доступа</h2>
+        <label class="field">
+          <span>Ключ доступа</span>
+          <input name="accessKey" type="text" autocomplete="one-time-code" placeholder="Например: VOSTOK-2026">
+        </label>
+        <button class="modal__submit" type="submit">Продолжить</button>
+        <p class="modal__message" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="team-modal" aria-labelledby="team-title">
+      <form class="modal__box" method="dialog" data-form="team">
+        <button class="modal__close" type="button" aria-label="Закрыть окно" data-close-modal>
+          ×
+        </button>
+        <p class="modal__eyebrow">Вход команды</p>
+        <h2 id="team-title">Логин и пароль</h2>
+        <label class="field">
+          <span>Логин</span>
+          <input name="login" type="text" autocomplete="username" placeholder="your.name">
+        </label>
+        <label class="field">
+          <span>Пароль</span>
+          <input name="password" type="password" autocomplete="current-password" placeholder="••••••••">
+        </label>
+        <button class="modal__submit" type="submit">Войти</button>
+        <p class="modal__message" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
