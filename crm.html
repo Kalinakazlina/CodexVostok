@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Project-first CRM для видеопродакшна ВОСТОК.">
+    <title>ВОСТОК CRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="crm-body">
+    <div class="crm-shell">
+      <aside class="crm-sidebar" aria-label="Навигация CRM">
+        <a class="crm-logo" href="index.html" aria-label="На главную">
+          <span class="crm-logo__mark">В</span>
+          <span>ВОСТОК</span>
+        </a>
+
+        <nav class="crm-nav">
+          <button class="crm-nav__item is-active" type="button" data-crm-view="today">
+            Сегодня
+          </button>
+          <button class="crm-nav__item" type="button" data-crm-view="projects">
+            Проекты
+          </button>
+          <button class="crm-nav__item" type="button" data-crm-view="clients">
+            Клиенты
+          </button>
+          <button class="crm-nav__item" type="button" data-crm-view="calendar">
+            Календарь
+          </button>
+          <button class="crm-nav__item" type="button" data-crm-view="review">
+            Ревью
+          </button>
+        </nav>
+
+        <div class="crm-user">
+          <span class="crm-user__avatar">МК</span>
+          <div>
+            <strong>Максим</strong>
+            <span>Владелец пространства</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="crm-main">
+        <header class="crm-topbar">
+          <div>
+            <p class="crm-kicker">Project-first CRM</p>
+            <h1>Сегодня в производстве</h1>
+          </div>
+          <div class="crm-topbar__actions">
+            <button class="btn btn--secondary" type="button">Сводка AI</button>
+            <button class="btn btn--primary" type="button">Новый проект</button>
+          </div>
+        </header>
+
+        <section class="crm-view is-active" data-view="today" aria-label="Сегодня">
+          <div class="metric-grid">
+            <article class="metric-card metric-card--primary">
+              <span>Активные проекты</span>
+              <strong>8</strong>
+              <small>3 требуют внимания</small>
+            </article>
+            <article class="metric-card">
+              <span>Задачи сегодня</span>
+              <strong>14</strong>
+              <small>5 на проверке</small>
+            </article>
+            <article class="metric-card">
+              <span>Ждём клиента</span>
+              <strong>4</strong>
+              <small>2 больше трёх дней</small>
+            </article>
+            <article class="metric-card">
+              <span>Ревью открыто</span>
+              <strong>23</strong>
+              <small>7 комментариев критичны</small>
+            </article>
+          </div>
+
+          <div class="crm-dashboard">
+            <section class="work-section work-section--wide" aria-labelledby="project-board-title">
+              <div class="section-head">
+                <div>
+                  <p class="crm-kicker">Все проекты</p>
+                  <h2 id="project-board-title">Канбан по фазам</h2>
+                </div>
+                <div class="segmented" aria-label="Режим просмотра проектов">
+                  <button class="segmented__item is-active" type="button" data-board-mode="board">Доска</button>
+                  <button class="segmented__item" type="button" data-board-mode="list">Таблица</button>
+                </div>
+              </div>
+
+              <div class="project-board" data-board-panel="board">
+                <section class="board-lane" aria-label="Бриф и оценка">
+                  <h3>Бриф и оценка</h3>
+                  <article class="project-card is-selected" tabindex="0" data-project-title="ИНВИТРО. HR-фильм" data-project-client="Инвитро" data-project-phase="Бриф и оценка" data-project-state="Требует внимания" data-project-deadline="26 июня" data-project-owner="Максим" data-project-progress="34" data-project-next="Зафиксировать структуру интервью и смету">
+                    <div>
+                      <strong>ИНВИТРО. HR-фильм</strong>
+                      <span>Инвитро</span>
+                    </div>
+                    <mark class="status status--warning">Требует внимания</mark>
+                    <p>Нужно финализировать героев и пакет вопросов.</p>
+                    <small>Дедлайн: 26 июня</small>
+                  </article>
+                  <article class="project-card" tabindex="0" data-project-title="РЖД. Серия интервью" data-project-client="РЖД" data-project-phase="Бриф и оценка" data-project-state="В норме" data-project-deadline="3 июля" data-project-owner="Катя" data-project-progress="18" data-project-next="Получить список площадок">
+                    <div>
+                      <strong>РЖД. Серия интервью</strong>
+                      <span>РЖД</span>
+                    </div>
+                    <mark class="status">В норме</mark>
+                    <p>Собирается вводная и карта локаций.</p>
+                    <small>Дедлайн: 3 июля</small>
+                  </article>
+                </section>
+
+                <section class="board-lane" aria-label="Пре-продакшн">
+                  <h3>Пре-продакшн</h3>
+                  <article class="project-card" tabindex="0" data-project-title="Сбер. День бренда" data-project-client="Сбер" data-project-phase="Пре-продакшн" data-project-state="Горит" data-project-deadline="24 июня" data-project-owner="Аня" data-project-progress="52" data-project-next="Утвердить режиссёрский сценарий">
+                    <div>
+                      <strong>Сбер. День бренда</strong>
+                      <span>Сбер</span>
+                    </div>
+                    <mark class="status status--danger">Горит</mark>
+                    <p>До съёмки два дня, сценарий ещё на правках.</p>
+                    <small>Дедлайн: 24 июня</small>
+                  </article>
+                  <article class="project-card" tabindex="0" data-project-title="ГМК. Обучающий ролик" data-project-client="ГМК" data-project-phase="Пре-продакшн" data-project-state="Ждём клиента" data-project-deadline="1 июля" data-project-owner="Дима" data-project-progress="41" data-project-next="Дождаться комментариев юристов">
+                    <div>
+                      <strong>ГМК. Обучающий ролик</strong>
+                      <span>ГМК</span>
+                    </div>
+                    <mark class="status status--muted">Ждём клиента</mark>
+                    <p>Материалы готовы, блокер на согласовании.</p>
+                    <small>Дедлайн: 1 июля</small>
+                  </article>
+                </section>
+
+                <section class="board-lane" aria-label="Производство">
+                  <h3>Производство</h3>
+                  <article class="project-card" tabindex="0" data-project-title="Энерго. Юбилей" data-project-client="Энерго" data-project-phase="Производство" data-project-state="В норме" data-project-deadline="28 июня" data-project-owner="Максим" data-project-progress="67" data-project-next="Проверить график второго съёмочного дня">
+                    <div>
+                      <strong>Энерго. Юбилей</strong>
+                      <span>Энерго</span>
+                    </div>
+                    <mark class="status">В норме</mark>
+                    <p>Подтверждены команда, техника и тайминг.</p>
+                    <small>Съёмка: 27 июня</small>
+                  </article>
+                </section>
+
+                <section class="board-lane" aria-label="Постпродакшн и ревью">
+                  <h3>Пост и ревью</h3>
+                  <article class="project-card" tabindex="0" data-project-title="Финтех. Кейс" data-project-client="Финтех" data-project-phase="Внутреннее ревью" data-project-state="Заблокирован" data-project-deadline="25 июня" data-project-owner="Лена" data-project-progress="74" data-project-next="Вернуть графику в монтаж">
+                    <div>
+                      <strong>Финтех. Кейс</strong>
+                      <span>Финтех</span>
+                    </div>
+                    <mark class="status status--danger">Заблокирован</mark>
+                    <p>Нет финальной версии анимационной вставки.</p>
+                    <small>Ревью: 9 комментариев</small>
+                  </article>
+                  <article class="project-card" tabindex="0" data-project-title="IT Park. Ролик" data-project-client="IT Park" data-project-phase="Клиентское согласование" data-project-state="Ждём клиента" data-project-deadline="30 июня" data-project-owner="Саша" data-project-progress="88" data-project-next="Напомнить про финальное утверждение">
+                    <div>
+                      <strong>IT Park. Ролик</strong>
+                      <span>IT Park</span>
+                    </div>
+                    <mark class="status status--muted">Ждём клиента</mark>
+                    <p>Финальная версия отправлена клиенту.</p>
+                    <small>Ждём 2 дня</small>
+                  </article>
+                </section>
+              </div>
+
+              <div class="project-table" data-board-panel="list" hidden>
+                <div class="table-row table-row--head">
+                  <span>Проект</span>
+                  <span>Клиент</span>
+                  <span>Фаза</span>
+                  <span>Состояние</span>
+                  <span>Дедлайн</span>
+                </div>
+                <div class="table-row">
+                  <span>ИНВИТРО. HR-фильм</span>
+                  <span>Инвитро</span>
+                  <span>Бриф и оценка</span>
+                  <span>Требует внимания</span>
+                  <span>26 июня</span>
+                </div>
+                <div class="table-row">
+                  <span>Сбер. День бренда</span>
+                  <span>Сбер</span>
+                  <span>Пре-продакшн</span>
+                  <span>Горит</span>
+                  <span>24 июня</span>
+                </div>
+                <div class="table-row">
+                  <span>Финтех. Кейс</span>
+                  <span>Финтех</span>
+                  <span>Внутреннее ревью</span>
+                  <span>Заблокирован</span>
+                  <span>25 июня</span>
+                </div>
+              </div>
+            </section>
+
+            <aside class="right-rail" aria-label="Оперативная сводка">
+              <section class="work-section">
+                <div class="section-head section-head--compact">
+                  <div>
+                    <p class="crm-kicker">Что горит</p>
+                    <h2>Риски</h2>
+                  </div>
+                </div>
+                <ul class="risk-list">
+                  <li>
+                    <strong>Сбер. День бренда</strong>
+                    <span>До съёмки 2 дня, сценарий не утверждён.</span>
+                  </li>
+                  <li>
+                    <strong>Финтех. Кейс</strong>
+                    <span>Графика блокирует финальный монтаж.</span>
+                  </li>
+                  <li>
+                    <strong>IT Park. Ролик</strong>
+                    <span>Клиент молчит после отправки версии.</span>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="work-section">
+                <div class="section-head section-head--compact">
+                  <div>
+                    <p class="crm-kicker">Команда</p>
+                    <h2>Загрузка</h2>
+                  </div>
+                </div>
+                <div class="load-list">
+                  <div>
+                    <span>Монтаж</span>
+                    <meter min="0" max="100" value="82"></meter>
+                  </div>
+                  <div>
+                    <span>Продюсеры</span>
+                    <meter min="0" max="100" value="64"></meter>
+                  </div>
+                  <div>
+                    <span>Дизайн</span>
+                    <meter min="0" max="100" value="91"></meter>
+                  </div>
+                </div>
+              </section>
+            </aside>
+          </div>
+
+          <section class="project-detail" aria-label="Страница проекта">
+            <div class="project-detail__summary">
+              <p class="crm-kicker">Страница проекта</p>
+              <h2 data-detail-title>ИНВИТРО. HR-фильм</h2>
+              <p data-detail-next>Зафиксировать структуру интервью и смету</p>
+              <div class="detail-meta">
+                <span data-detail-client>Инвитро</span>
+                <span data-detail-phase>Бриф и оценка</span>
+                <span data-detail-state>Требует внимания</span>
+                <span data-detail-owner>Максим</span>
+              </div>
+            </div>
+            <div class="progress-block">
+              <span>Прогресс</span>
+              <strong data-detail-progress>34%</strong>
+              <progress max="100" value="34" data-detail-progressbar></progress>
+            </div>
+            <div class="project-tabs" aria-label="Разделы проекта">
+              <button class="project-tabs__item is-active" type="button">Обзор</button>
+              <button class="project-tabs__item" type="button">Задачи</button>
+              <button class="project-tabs__item" type="button">Материалы</button>
+              <button class="project-tabs__item" type="button">История</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="crm-view" data-view="projects" aria-label="Проекты">
+          <div class="empty-view">
+            <p class="crm-kicker">Все проекты</p>
+            <h2>Одна база, много представлений</h2>
+            <p>Здесь будут таблица, календарь дедлайнов, таймлайн этапов и группировки по клиентам, продюсерам и людям.</p>
+          </div>
+        </section>
+
+        <section class="crm-view" data-view="clients" aria-label="Клиенты">
+          <div class="client-grid">
+            <article class="client-card">
+              <strong>Инвитро</strong>
+              <span>3 активных проекта</span>
+              <p>Следующий шаг: утвердить героев HR-фильма.</p>
+            </article>
+            <article class="client-card">
+              <strong>Сбер</strong>
+              <span>1 активный проект</span>
+              <p>Следующий шаг: согласовать режиссёрский сценарий.</p>
+            </article>
+            <article class="client-card">
+              <strong>Финтех</strong>
+              <span>2 завершённых проекта</span>
+              <p>Следующий шаг: закрыть правки по графике.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="crm-view" data-view="calendar" aria-label="Календарь">
+          <div class="calendar-strip">
+            <article>
+              <span>24 июня</span>
+              <strong>Сбер. Сценарий</strong>
+              <p>Критический дедлайн</p>
+            </article>
+            <article>
+              <span>26 июня</span>
+              <strong>ИНВИТРО. Бриф</strong>
+              <p>Фиксация структуры</p>
+            </article>
+            <article>
+              <span>27 июня</span>
+              <strong>Энерго. Съёмка</strong>
+              <p>Второй съёмочный день</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="crm-view" data-view="review" aria-label="Ревью">
+          <div class="review-layout">
+            <section class="review-frame" aria-label="Плеер ревью">
+              <div class="review-frame__screen">
+                <span class="review-frame__play"></span>
+                <span class="review-frame__marker review-frame__marker--one"></span>
+                <span class="review-frame__marker review-frame__marker--two"></span>
+              </div>
+              <div class="review-timeline">
+                <span></span>
+              </div>
+            </section>
+            <aside class="review-comments">
+              <p class="crm-kicker">Media review</p>
+              <h2>Комментарии по таймкоду</h2>
+              <article>
+                <strong>00:18</strong>
+                <span>Сократить паузу перед репликой героя.</span>
+              </article>
+              <article>
+                <strong>01:42</strong>
+                <span>Заменить титр на формулировку клиента.</span>
+              </article>
+              <article>
+                <strong>02:16</strong>
+                <span>Проверить цветокор на крупном плане.</span>
+              </article>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

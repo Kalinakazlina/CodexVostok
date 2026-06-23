@@ -1,12 +1,13 @@
-# CodexVostok
+# ВОСТОК
 
-Простейшая статическая стартовая страница для GitHub Pages: две точки входа для команды и клиента, модальные окна и временный маскот видеопродакшна. Визуальный слой адаптирован под дизайн-систему с токенами `background`, `foreground`, `card`, `primary`, `secondary`, `accent`, `border`, `input`, `ring` и шрифтами `Open Sans`, `Georgia`, `Menlo`.
+Простейшая статическая стартовая страница для GitHub Pages: вход для клиента, переход команды в CRM-прототип и временный маскот видеопродакшна. Визуальный слой адаптирован под дизайн-систему с токенами `background`, `foreground`, `card`, `primary`, `secondary`, `accent`, `border`, `input`, `ring` и шрифтом `Roboto`.
 
 ## Файлы
 
 - `index.html` — разметка страницы и модальных окон.
+- `crm.html` — первый экран project-first CRM для команды.
 - `styles.css` — адаптивная верстка, кнопки и CSS-маскот.
-- `script.js` — открытие/закрытие окон и базовая обработка форм.
+- `script.js` — открытие/закрытие окон, переключение CRM-разделов и карточек проекта.
 
 ## Локальный просмотр
 
@@ -24,7 +25,7 @@
 Если публикуешь из этого локального репозитория:
 
 ```bash
-git add index.html styles.css script.js README.md
+git add index.html crm.html styles.css script.js README.md
 git commit -m "Add static GitHub Pages entry page"
 git push origin main
 ```
